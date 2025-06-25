@@ -1,0 +1,86 @@
+.header
+	position: sticky
+	top: 10px
+	z-index: 3
+	&__wrap
+		display: flex
+		align-items: center
+		justify-content: space-between
+		padding: 20px
+		-webkit-backdrop-filter: blur(20px)
+		backdrop-filter: blur(20px)
+		border-radius: 10px
+		&.animated
+			background: hsla(16, 31%, 93%, .59)
+
+.logo
+	display: flex
+	align-items: center
+	grid-gap: 5px
+	&-left img
+		max-width: 30px
+
+nav
+	+r(991)
+		display: none
+	ul
+		display: flex
+		align-items: center
+		grid-gap: 20px
+	a
+		color: $b26
+		+med
+		+trans(color)
+		&:hover
+			color: $primary
+
+.cta
+	display: flex
+	align-items: center
+	grid-gap: 20px
+	+r(991)
+		display: none
+
+	&__tel
+		font-size: 22px
+		+med
+		color: $g8
+		+trans(color)
+		&:hover
+			color: $primary
+		+r(767)
+			font-size: 0
+			display: flex
+			align-items: center
+			justify-content: center
+			width: 50px
+			height: 50px
+			+br(50%)
+			background: $primary
+
+.lang
+	display: flex
+	align-items: center
+	grid-gap: 10px
+	position: relative
+	height: 100%
+
+.lang-item
+	text-decoration: underline
+	display: block
+	font-size: 12px
+	+reg
+	color: $g8
+	+trans(color)
+	&:hover
+		color: $primary
+
+.lang-item-active
+	text-decoration: none
+	color: rgba($g8,.3)
+
+.vertical-divider
+	display: block
+	height: 10px
+	width: 1px
+	background: rgba($g8,.3)

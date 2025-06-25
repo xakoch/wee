@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Project name - Preview page</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"> -->
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0" />
+    <!-- favicon -->
+    <meta name="msapplication-TileColor" content="#1C509D">
+    <meta name="theme-color" content="#1C509D" />
+    <meta name="format-detection" content="telephone=no" />
+    <!-- style -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" media="all" href="assets/css/style.min.css" />
+</head>
+<body>
+
+    
+        <style>
+            .devpage {
+                padding: 60px 0;
+            }
+    
+            .devpages {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                grid-gap: 15px;
+                margin-top: 80px;
+            }
+    
+            @media only screen and (max-width: 1024px) {
+                .devpages {
+                    grid-template-columns: repeat(2, 1fr);
+                    grid-gap: 30px;
+                }
+            }
+            .devpage h2 {
+                margin-bottom: 20px !important;
+            }
+    
+            .devpage a {
+                display: table;
+                text-decoration: underline !important;
+                margin-bottom: 15px;
+                position: relative;
+            }
+    
+            .devpage a::after {
+                content: "";
+                display: block;
+                position: absolute;
+                top: 0;
+                right: -30px;
+            }
+    
+            .devpage a.none {
+                color: #B2B0BB;
+                cursor: not-allowed;
+            }
+    
+            .devpage a.none::after {
+                content: "🔒";
+            }
+    
+            .devpage a.process {
+                color: #EE9A6B;
+            }
+    
+            .devpage a.process::after {
+                content: "⚔️";
+            }
+    
+            .devpage a.done {
+                color: #27C062;
+            }
+    
+            .devpage a.done::after {
+                content: "✅";
+            }
+        </style>
+    
+        <div class="container">
+            <div class="devpage">
+                <h1>Wee - Pages</h1>
+                <hr>
+                <div class="devpages">
+                    <div class="dev__group">
+                        <h2>Basic pages</h2>
+                        <a class="process" href="home.html">Home</a>
+                        <a class="none" href="home-2.html">Home - 2</a>
+                        <a class="none" href="contact-us.html">Contact Us</a>
+                        <a class="none" href="accessibility-statement.html">Accessibility Statement</a>
+                        <a class="none" href="privacy.html">Privacy Policy</a>
+                        <a class="none" href="terms.html">Terms & Conditions</a>
+                        <a class="none" href="404.html">404</a>
+                    </div>
+                    <div class="dev__group">
+                        <h2>About pages</h2>
+                        <a class="none" href="about.html">About</a>
+                        <a class="none" href="about-practice.html">About Practice</a>
+                        <a class="none" href="team.html">Team</a>
+                        <a class="none" href="team-single.html">Team - Single</a>
+                    </div>
+                    <div class="dev__group">
+                        <h2>Services pages</h2>
+                        <a class="none" href="services.html">Services</a>
+                        <a class="none" href="services-single.html">Services - Single</a>
+                    </div>
+                    <div class="dev__group">
+                        <h2>Other pages</h2>
+                        <a class="none" href="smile-gallery.html">Smile Gallery</a>
+                        <a class="none" href="testimonials.html">Testimonials</a>
+                        <a class="none" href="patient-info.html">Patient Information</a>
+                        <a class="none" href="blog.html">Blog</a>
+                        <a class="none" href="blog-single.html">Blog - Single</a>
+                    </div>
+                </div>
+            </div>    
+        </div>
+
+    <a class="back" href="/">back to all pages</a>
+    <!-- END content -->
+
+    <div class="modal modal__price" id="modal1">
+        <div class="modal__inner">
+            <div class="modal__head">
+                <div class="modal__title">Тариф - Преимум</div>
+                <button class="modal__close" data-modal-close="">✕</button>
+            </div>
+            <div class="modal__content">
+                <div class="modal__scroll">
+                    <div class="modal__price-list">
+                        <div class="modal__price-item">
+                            <p>Шпаклевка</p>
+                            <span>Eleron</span>
+                        </div>
+                        <div class="modal__price-item">
+                            <p>Родбэнд</p>
+                            <span>Eleron</span>
+                        </div>
+                        <div class="modal__price-item">
+                            <p>Кафельный клей</p>
+                            <span>Knauf</span>
+                        </div>
+                        <div class="modal__price-item">
+                            <p>Гипсокартон</p>
+                            <span>Volma</span>
+                        </div>
+                        <div class="modal__price-item">
+                            <p>Цемент</p>
+                            <span>Турон 500</span>
+                        </div>
+                        <div class="modal__price-item">
+                            <p>Гидроизаляция</p>
+                            <span>Ventum</span>
+                        </div>
+                        <div class="modal__price-item">
+                            <p>Профиль толщина</p>
+                            <span>0,4 мм</span>
+                        </div>
+                        <div class="modal__price-item">
+                            <p>Рейки</p>
+                            <span>Россия</span>
+                        </div>
+                        <div class="modal__price-item">
+                            <p>Кафель</p>
+                            <span>Индия, 60x60, 120x60</span>
+                        </div>
+                        <div class="modal__price-item">
+                            <p>Пол</p>
+                            <span>Ламинат Италия 8-10 мм</span>
+                        </div>
+                        <div class="modal__price-item">
+                            <p>Тяги</p>
+                            <span>Гипс</span>
+                        </div>
+                        <div class="modal__price-item">
+                            <p>Краска</p>
+                            <span>Dyo</span>
+                        </div>
+                        <div class="modal__price-item">
+                            <p>Плинтус</p>
+                            <span>Пластик Россия</span>
+                        </div>
+                        <div class="modal__price-item">
+                            <p>Обои</p>
+                            <span>Средней ценовой категории</span>
+                        </div>
+                        <div class="modal__price-item">
+                            <p>Сантехника</p>
+                            <span>Vero</span>
+                        </div>
+                        <div class="modal__price-item">
+                            <p>Унитаз</p>
+                            <span>Coco</span>
+                        </div>
+                        <div class="modal__price-item">
+                            <p>Смеситель</p>
+                            <span>Bau</span>
+                        </div>
+                        <div class="modal__price-item">
+                            <p>Регистр</p>
+                            <span>Akfa</span>
+                        </div>
+                        <div class="modal__price-item">
+                            <p>Теплый пол</p>
+                            <span>Herz</span>
+                        </div>
+                        <div class="modal__price-item">
+                            <p>Электроустановочные изделия</p>
+                            <span>Panasonic</span>
+                        </div>
+                        <div class="modal__price-item">
+                            <p>Электропроводка</p>
+                            <span>Uzcabel</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal__overlay"></div>
+    </div>
+
+    <div class="modal modal__feedback" id="modal2">
+        <div class="modal__inner">
+            <div class="modal__head">
+                <div class="modal__title">Оставьте заявку <br> на консултацию</div>
+                <button class="modal__close" data-modal-close="">✕</button>
+            </div>
+            <div class="modal__content">
+                
+            </div>
+        </div>
+        <div class="modal__overlay"></div>
+    </div>
+
+    <!-- BEGIN scripts -->
+    <script defer type="text/javascript" src="assets/js/lib.min.js"></script>
+    <script defer type="text/javascript" src="assets/js/app.min.js"></script>
+    <!-- END scripts -->
+
+</body>
+</html>

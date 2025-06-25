@@ -1,0 +1,49 @@
+.footer
+	background: $w
+	padding: 80px 0 40px
+	position: relative
+
+	&__top
+		display: flex
+		align-items: flex-start
+		justify-content: space-between
+
+		ul
+			display: flex
+			flex-direction: column
+			grid-gap: 5px
+
+		a
+			font-size: 18px
+			color: $b26
+			+trans(color)
+			&:hover
+				color: $primary
+
+	&__contact
+		text-align: right
+
+	&__logo
+		+bold
+		font-size: 8.5vw
+		line-height: 120%
+		padding: 20px 0
+		+r(767)
+			font-size: 55px
+
+	&__bottom
+		display: flex
+		align-items: center
+		justify-content: space-between
+
+		p
+			color: $b5
+			font-size: 12px
+
+		span
+			font-size: 12px
+
+		a
+			+semi
+			color: $g8
+			font-size: 12spx

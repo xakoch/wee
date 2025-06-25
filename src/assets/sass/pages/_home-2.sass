@@ -1,0 +1,284 @@
+.hero
+	padding: 100px 0 180px
+	background-image: url(../img/hero-img.png)
+	background-size: cover
+	background-position: center
+	background-repeat: no-repeat
+	color: $w
+	+r(767)
+		padding: 60px 0 120px
+	&::before
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		background: linear-gradient(to left, rgba(0,0,0,.2) 50%, rgba(0,0,0,.7) 100%)
+		+r(767)
+			background: rgba($b,.6)
+
+	&__inner
+		display: grid
+		grid-template-columns: 1fr 1fr
+		grid-gap: 50px
+		+r(991)
+			display: flex
+			flex-direction: column
+
+	h1
+		font-size: 48px
+		line-height: 110%
+		+lig
+		font-weight: normal
+		b
+			+bold
+			font-weight: bold
+		+r(767)
+			font-size: 36px
+			line-height: 120%
+		+r(560)
+			font-size: 30px
+
+	&__text
+		p
+			+lig
+			font-size: 20px
+			line-height: 140%
+			margin: 30px 0 48px
+			+r(767)
+				font-size: 18px
+
+		span
+			font-size: 24px
+			+bold
+			+r(767)
+				display: inline-block
+				margin-top: 5px
+				font-size: 20px
+
+	&__fea
+		margin-bottom: 90px
+		display: flex
+		align-items: center
+		grid-gap: 60px
+		+r(767)
+			margin-bottom: 50px
+			grid-gap: 30px
+			flex-direction: column
+			align-items: flex-start
+
+	&__fea-item
+		display: flex
+		align-items: center
+		grid-gap: 12px
+
+	&__fea-item-icon
+		width: 50px
+		height: 50px
+		+br(50%)
+		+flex
+		background: $br
+
+	&__fea-item-text
+		font-size: 15px
+		+reg
+		line-height: 130%
+
+	&__btn
+		button
+			background: $gd
+			color: $b
+			+br(18px)
+			padding: 20px 60px
+			font-size: 16px
+			+med
+			display: flex
+			align-items: center
+			+trans(background)
+			&:hover
+				background: #f1e48c
+				svg
+					transform: translateX(20px)
+		svg
+			fill: $b
+			width: 25px
+			transform: translateX(15px)
+			+trans(transform)
+
+	&__form
+		+br(40px)
+		background: rgba($w,.8)
+		height: 400px
+		width: 100%
+		color: $b
+		+flex
+		font-size: 36px
+
+
+
+
+// =============================
+// Offer
+// =============================
+.offers
+	margin-top: -75px
+	color: $w
+
+.offers__wrap
+	display: grid
+	grid-template-columns: 1fr 1fr
+	grid-gap: 20px
+	+r(1200)
+		grid-gap: 10px
+	+r(767)
+		grid-template-columns: 1fr
+
+.offer
+	&__item
+		display: grid
+		grid-template-columns: 1fr 1fr
+		+br(18px)
+		background: rgba($y, .8)
+		width: 100%
+		-webkit-backdrop-filter: blur(5.47px)
+		backdrop-filter: blur(5.47px)
+		grid-gap: 15px
+		&.--dark
+			background: rgba($b,.6)
+		+r(767)
+			height: 200px
+			overflow: hidden
+			grid-template-columns: 2fr 1fr
+
+	&__content
+		padding: 20px
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		grid-gap: 30px
+
+		h3
+			font-weight: normal
+			font-size: 24px
+			line-height: 110%
+			+med
+			+r(1200)
+				font-size: 22px
+			+r(991)
+				font-size: 18px
+
+		p
+			+lig
+			font-size: 16px
+			+r(991)
+				font-size: 14px
+
+	&__img
+		img
+			width: 100%
+			height: 100%
+			object-fit: cover
+			object-position: center
+			+br(15px)
+
+
+// =============================
+// Steps
+// =============================
+.steps
+	padding: 60px 0 100px
+	background: $gd
+	+br(30px)
+	+r(767)
+		+br(20px)
+		padding: 40px 0 70px
+
+	&__wrap
+		margin-top: 80px
+		display: grid
+		grid-template-columns: repeat(5, 1fr)
+		grid-gap: 15px
+		+r(991)
+			grid-template-columns: repeat(3, 1fr)
+		+r(767)
+			grid-template-columns: repeat(2, 1fr)
+			grid-gap: 10px
+			& > *:last-child
+				grid-column: 1 / -1  // Это правило растягивает последний элемент на всю ширину
+
+	&__cta
+		margin-top: 50px
+		display: flex
+		align-items: center
+		justify-content: center
+		grid-gap: 15px
+		+r(767)
+			flex-direction: column
+
+		span
+			margin: 0 15px
+			display: inline-block
+
+		a
+			display: flex
+			color: $b
+			svg
+				fill: $b
+				position: relative
+				top: 3px
+				margin-right: 10px
+
+.step
+
+	&__item
+		+br(28px)
+		background: $w
+		+trans(transform)
+		transform: translateY(0)
+		&:hover
+			transform: translateY(-15px)
+
+	&__num
+		padding: 20px 20px 35px
+		font-size: 24px
+		+reg
+		+r(767)
+			padding: 20px 20px 15px
+
+	&__icon
+		+br(28px)
+		background: $f5
+		margin: 10px
+		height: 150px
+		+flex
+		+r(767)
+			height: 150px
+		+r(560)
+			height: 100px
+			img
+				width: 40px
+
+
+	&__text
+		padding: 30px 20px 24px
+		+r(767)
+			padding: 15px 20px 24px
+		p
+			font-size: 20px
+			+reg
+			+r(1200)
+				font-size: 18px
+			+r(560)
+				font-size: 16px
+				line-height: 120%
+
+
+
+// =============================
+// Price
+// =============================
+.price
+	margin-top: -50px
+	z-index: -1
+	padding: 150px 0 100px

@@ -1,0 +1,254 @@
+//===========================================
+// Hero
+//===========================================
+.hero
+	padding-top: 6%
+	margin-bottom: 100px
+	+r(767)
+		padding: 80px 0 100px
+		margin-bottom: 0
+	+r(560)
+		padding: 50px 0 70px
+
+	&__subtitle
+		margin-bottom: 20px
+		+r(767)
+			max-width: 75%
+			margin: 0 auto 20px auto
+		+r(560)
+			max-width: 85%
+		h4
+			font-size: 16px
+			+med
+			line-height: 160%
+			text-align: center
+			margin-bottom: 20px
+			color: $g8
+			+r(560)
+				font-size: 14px
+		br
+			+r(767)
+				display: none
+
+	&__title
+		h1
+			font-size: 6.5vw
+			line-height: 100%
+			position: relative
+			text-align: center
+			+r(1200)
+				font-size: 8vw
+			+r(560)
+				font-size: 36px
+
+	&__buttons
+		display: flex
+		align-items: center
+		justify-content: center
+		grid-gap: 30px
+		margin-top: 50px
+		+r(560)
+			flex-direction: column
+			grid-gap: 15px
+			margin-top: 30px
+
+.hero-img
+	position: sticky
+	top: 0
+	bottom: auto
+	&__content
+		height: 80vh
+		+r(1440)
+			height: 70vh
+		+r(1200)
+			height: 65vh
+		+r(991)
+			height: 60vh
+		+r(767)
+			height: 30vh
+		img
+			width: 100%
+			height: 100%
+			object-fit: cover
+			object-position: center
+
+//===========================================
+// Services
+//===========================================
+.services
+	padding: 80px 0
+	background: $f3
+	overflow: hidden
+	+r(767)
+		padding: 60px 0
+
+	.section__head
+		margin-bottom: 65px
+
+.service-list
+	display: grid
+	grid-template-columns: repeat(4, minmax(310px, 1fr))
+	grid-gap: 20px
+	overflow-x: auto
+	// white-space: nowrap
+	-webkit-overflow-scrolling: touch
+	scrollbar-width: none
+	scroll-snap-type: x mandatory
+	&::-webkit-scrollbar
+		display: none
+
+.service-img
+	position: relative
+	height: 270px
+	min-width: 310px
+	scroll-snap-align: start
+	&::after
+		content: ''
+		display: block
+		position: absolute
+		bottom: 0
+		right: 0
+		width: 30px
+		height: 30px
+		border: 20px solid transparent
+		border-right: 20px solid $f3
+		border-bottom: 20px solid $f3
+	img
+		height: 100%
+		width: 100%
+		object-fit: cover
+	span
+		position: absolute
+		top: 20px
+		left: 0
+		padding: 10px 15px
+		font-size: 13px
+		background: $primary
+		color: $w
+		z-index: 3
+
+.service-name
+	font-size: 28px
+	margin: 20px 0
+	text-transform: uppercase
+
+.service-text
+	p
+		font-size: 15px
+		color: $b5
+		max-width: 85%
+
+.service-price
+	display: flex
+	align-items: flex-end
+	grid-gap: 5px
+	margin: 30px 0 20px
+	span
+		font-size: 20px
+		display: inline-block
+		vertical-align: bottom
+		color: $b26
+		margin-bottom: 3px
+	p
+		font-size: 2vw
+		+med
+		line-height: 125%
+		+r(991)
+			font-size: 30px
+
+//===========================================
+// Steps
+//===========================================
+.steps
+	padding: 80px 0
+	background: $f3
+	+r(767)
+		padding: 60px 0
+
+	&-list
+		padding: 80px 0 20px
+
+	&-footer
+		display: flex
+		justify-content: center
+
+.step
+
+	&-item
+		position: sticky
+		top: 100px
+		padding-bottom: 80px
+		background: $f3
+
+	&-num
+		text-align: center
+		font-size: 5vw
+		line-height: 85%
+		color: rgba($b8, 0.2)
+		min-width: 50px
+		min-height: 50px
+		margin-bottom: 6%
+		+r(991)
+			font-size: 60px
+
+	&-title
+		text-align: center
+		font-size: 2.5vw
+		+bold
+		line-height: 125%
+		+r(991)
+			font-size: 30px
+
+	&-text
+		text-align: center
+		margin-top: 20px
+
+
+//===========================================
+// Partners
+//===========================================
+.partners
+	padding: 80px 0
+	background: radial-gradient(ellipse at 50% 50%,$secondary 0,$br 100%)
+	+r(767)
+		padding: 60px 0
+
+	&-list
+		margin-top: 80px
+
+.marquee
+	position: relative
+	display: flex
+	gap: 20px
+	overflow: hidden
+
+.marquee + .marquee
+	margin-top: 20px
+
+.marquee-item
+	width: 150px
+	display: flex
+	align-items: center
+	justify-content: center
+	padding: 15px
+	flex-shrink: 0
+	background: white
+	border-radius: 10px
+
+// @media (min-width: 700px)
+//   .marquee
+//     gap: 40px;
+//  
+
+//   .marquee + .marquee
+//     margin-top: 40px;
+//   }
+
+//   .marquee-item
+//     width: 250px;
+//     padding: 30px;
+//   }
+// }
+
+
+

@@ -1,0 +1,111 @@
+.btn
+	display: flex
+	align-items: center
+	position: relative
+	+med
+	cursor: pointer
+	text-align: center
+	+br(60px)
+	font-size: 16px
+	min-height: 55px
+	padding: 14px 50px
+	transition: color .2s ease, background .2s ease
+	grid-gap: 10px
+	text-transform: uppercase
+	max-width: fit-content
+	svg
+		width: 20px
+		height: 20px
+		+trans(transform, .15s)
+	+r(991)
+		font-size: 14px
+		min-height: 50px
+		padding: 14px 40px
+
+.btn-primary
+	background: $primary
+	color: $w
+	border: 1px solid $primary
+	&:hover
+		background: transparent
+		color: $primary
+		svg
+			fill: $primary
+			transform: rotate(-45deg)
+	svg
+		fill: $w
+
+.btn-secondary
+	background: transparent
+	color: $primary
+	border: 1px solid $primary
+	&:hover
+		background: $primary
+		color: $w
+		svg
+			fill: $w
+			transform: rotate(-45deg)
+	svg
+		fill: $primary
+
+// 	svg
+// 		transform: translateX(10px)
+// 		+trans(transform)
+// 		position: relative
+// 		z-index: 2
+
+// .btn-ghost
+// 	border-radius: 5px
+// 	border: 1px solid $b3
+// 	padding: 16px 32px
+// 	+trans(border-color)
+// 	&:hover
+// 		border-color: $gr
+// 		svg
+// 			transform: translateX(0px)
+// 	span
+// 		color: $gr
+// 		text-align: center
+// 		+med
+// 		font-size: 15px
+// 		font-style: normal
+// 		font-weight: 500
+// 		line-height: 18px
+
+// 	svg
+// 		transform: translateX(10px)
+// 		+trans(transform)
+
+// 	path
+// 		fill: $gr
+
+// 	+r(768)
+// 		text-align: center
+
+// .link
+// 	display: flex
+// 	grid-gap: 6px
+// 	align-items: center
+// 	&:hover
+// 		span
+// 			color: $b9
+// 		svg
+// 			transform: translateX(-6px)
+// 		path
+// 			fill: $b9
+// 	span
+// 		+med
+// 		color: $gr
+// 		font-size: 15px
+// 		font-weight: 500
+// 		line-height: 18px
+// 		letter-spacing: 0.3px
+// 		+trans(color)
+// 	svg
+// 		transform: translateX(0)
+// 		+trans(transform)
+
+// .no-transform
+// 	svg
+// 		transform: none
+// 		margin-right: 10px
