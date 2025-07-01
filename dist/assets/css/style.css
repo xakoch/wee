@@ -235,6 +235,7 @@ body.overflow {
     .call_fix {
         right: 50%;
         transform: translateX(50%);
+        animation: pulse-mobile 2s infinite;
     }
 }
 
@@ -251,6 +252,23 @@ body.overflow {
 
     100% {
         transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(205, 187, 70, 0);
+    }
+}
+
+@keyframes pulse-mobile {
+    0% {
+        transform: translateX(50%) scale(1);
+        box-shadow: 0 0 0 0 rgba(205, 187, 70, 0.7);
+    }
+
+    50% {
+        transform: translateX(50%) scale(1.05);
+        box-shadow: 0 0 0 10px rgba(205, 187, 70, 0);
+    }
+
+    100% {
+        transform: translateX(50%) scale(1);
         box-shadow: 0 0 0 0 rgba(205, 187, 70, 0);
     }
 }
