@@ -400,6 +400,16 @@ nav a:hover {
     background: rgba(8, 8, 8, 0.3);
 }
 
+.burger {
+    display: none;
+}
+
+@media only screen and (max-width: 991px) {
+    .burger {
+        display: flex;
+    }
+}
+
 .footer {
     background: #ffffff;
     padding: 80px 0 40px;
@@ -437,7 +447,7 @@ nav a:hover {
     font-weight: 700;
     font-optical-sizing: auto;
     font-style: normal;
-    font-size: 8.5vw;
+    font-size: 12vw;
     line-height: 120%;
     padding: 20px 0;
 }
@@ -1373,4 +1383,18 @@ nav a:hover {
     .projects-text p {
         max-width: 100%;
     }
+}
+
+.single__enter {
+    padding: 100px 0;
+}
+
+.single__enter h1 {
+    font-size: 7vw;
+    line-height: 115%;
+    font-weight: normal;
+}
+
+.single__enter img {
+    margin-top: 60px;
 }
