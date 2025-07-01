@@ -16,7 +16,7 @@ body
 	position: fixed
 	top: 0
 	left: 0
-	background-color: rgba(0,0,0,.3)
+	background-color: rgba(0,0,0,.7)
 	z-index: 101
 	display: none
 	&.is-active
@@ -75,7 +75,32 @@ body
 		height: 440px
 		background: linear-gradient(180deg, rgba(234, 233, 239, 0.65) 0%, rgba(234, 233, 239, 0.00) 100%)
 
+.call_fix
+	position: fixed
+	bottom: 30px
+	right: 30px
+	background: $primary
+	color: $w
+	padding: 14px 25px
+	+br(20px)
+	display: flex
+	grid-gap: 10px
+	cursor: pointer
+	animation: pulse 2s infinite
+	+r(767)
+		right: 50%
+		transform: translateX(50%)
 
+@keyframes pulse
+	0%
+		transform: scale(1)
+		box-shadow: 0 0 0 0 rgba($primary, 0.7)
+	50%
+		transform: scale(1.05)
+		box-shadow: 0 0 0 10px rgba($primary, 0)
+	100%
+		transform: scale(1)
+		box-shadow: 0 0 0 0 rgba($primary, 0)
 
 .blur-wrapper
 	height: 100%

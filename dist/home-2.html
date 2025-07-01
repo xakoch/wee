@@ -7,8 +7,8 @@
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"> -->
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0" />
     <!-- favicon -->
-    <meta name="msapplication-TileColor" content="#1C509D">
-    <meta name="theme-color" content="#1C509D" />
+    <meta name="msapplication-TileColor" content="#CDBB46">
+    <meta name="theme-color" content="#CDBB46" />
     <meta name="format-detection" content="telephone=no" />
     <!-- style -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -36,7 +36,6 @@
     							<li><a href="#services">Услуги</a></li>
     							<li><a href="#projects">Проекты</a></li>
     							<li><a href="#about">О нас</a></li>
-    							<li><a href="#reviews">Отзывы</a></li>
     							<li><a href="#contacts">Контакты</a></li>
     						</ul>
     					</nav>
@@ -48,14 +47,47 @@
     							<a class="lang-item" href="#">UZ</a>
     						</div>
     					</div>
-    					<button class="burger">
-    						<span>Меню</span>
-    						<span></span>
+    					<button class="burger">Меню
+    						<!-- <span class="burger--lines">
+    							<span></span>
+    							<span></span>
+    						</span> -->
+    						<!-- <span>Меню</span> -->
     					</button>
     				</div>
     			</div>
     		</header>
     		<!-- ./header -->
+    	
+    		<!-- header mobile -->
+    		<div class="mobile__menu">
+    			<div class="mobile__menu--inner">
+    				<div class="mobile__menu--group">
+    					<div class="mobile__menu--title">Навигация</div>
+    					<ul class="header__nav">
+    						<li><a href="#services">Услуги</a></li>
+    						<li><a href="#projects">Проекты</a></li>
+    						<li><a href="#about">О нас</a></li>
+    						<li><a href="#contacts">Контакты</a></li>
+    					</ul>
+    				</div>
+    				<div class="mobile__menu--footer">
+    					<div class="mobile__menu--group">
+    						<div class="mobile__menu--title">Номер телефона</div>
+    						<a class="mobile__menu--tel" href="tel:+9999999999">+998 (71) 200 13-13</a>
+    					</div>
+    					<div class="mobile__menu--group">
+    						<div class="lang">
+    							<a class="lang-item lang-item-active" href="#">🇷🇺 RU</a>
+    							<a class="lang-item" href="#">🇺🇿 UZ</a>
+    						</div>
+    					</div>
+    				</div>
+    			</div>
+    		</div>
+    		<!-- ./header mobile -->
+    	
+    		<button class="burger__close">Закрыть</button>
     	<!-- hero -->
     	<section class="section hero">
     		<div class="container">
@@ -227,7 +259,7 @@
     
     	<div class="padding"></div>
 
-    <a class="back" href="/">back to all pages</a>
+    <!-- <a class="back" href="/">back to all pages</a> -->
     <!-- END content -->
 
     <div class="modal modal__price" id="modal1">
@@ -342,6 +374,13 @@
         </div>
         <div class="modal__overlay"></div>
     </div>
+
+    <div class="overlay"></div>
+
+    <a class="call_fix" href="tel:+998782001313">
+        <span>📞</span>
+        <span>Позвонить</span>
+    </a>
 
     <!-- BEGIN scripts -->
     <script defer type="text/javascript" src="assets/js/lib.min.js"></script>

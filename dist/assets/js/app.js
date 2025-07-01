@@ -120,6 +120,108 @@ function initModals() {
     });
 }
 
+/**************************************************************
+* Header / Menu burger
+**************************************************************/
+const body = document.querySelector('body');
+const burger = document.querySelector('.burger');
+const closeButton = document.querySelector('.burger__close');
+const overlay = document.querySelector('.overlay');
+const menu = document.querySelectorAll('.mobile__menu');
+const links = document.querySelectorAll('.mobile__menu .header__nav a');
+const langLinks = document.querySelectorAll('.language-chooser a');
+
+// Установка начального состояния меню и кнопки закрыть
+gsap.set(menu, {
+    y: -100,
+    autoAlpha: 0
+});
+
+gsap.set(closeButton, {
+    y: 50,
+    autoAlpha: 0
+});
+
+function toggleMobileMenu() {
+    if (!burger.classList.contains('is-active')) {
+        // Открываем меню
+        burger.classList.add('is-active');
+        overlay.classList.add('is-active');
+        closeButton.classList.add('is-active');
+        body.classList.add('overflow');
+        
+        // Анимация меню
+        gsap.to(menu, { 
+            y: 0,
+            autoAlpha: 1,
+            duration: 0.4,
+            ease: "power2.out"
+        });
+        
+        // Анимация кнопки закрыть
+        gsap.to(closeButton, {
+            y: 0,
+            autoAlpha: 1,
+            duration: 0.3,
+            delay: 0.2,
+            ease: "power2.out"
+        });
+        
+    } else {
+        // Закрываем меню
+        burger.classList.remove('is-active');
+        overlay.classList.remove('is-active');
+        closeButton.classList.remove('is-active');
+        body.classList.remove('overflow');
+        
+        // Анимация кнопки закрыть
+        gsap.to(closeButton, {
+            y: 50,
+            autoAlpha: 0,
+            duration: 0.2,
+            ease: "power2.in"
+        });
+        
+        // Анимация меню
+        gsap.to(menu, { 
+            y: -100,
+            autoAlpha: 0,
+            duration: 0.2,
+            // delay: 0.1,
+            ease: "power2.in"
+        });
+    }
+}
+
+// Обработчики событий
+closeButton.addEventListener('click', e => {
+    e.preventDefault();
+    toggleMobileMenu();
+});
+
+burger.addEventListener('click', e => {
+    e.preventDefault();
+    toggleMobileMenu();
+});
+
+links.forEach(link => {
+    link.addEventListener('click', e => {
+        e.preventDefault();
+        burger.classList.remove('is-open');
+        body.classList.remove('overflow');
+        gsap.to(menu, { autoAlpha: 0, ease: "power2" })
+    });
+});
+
+langLinks.forEach(lang => {
+    lang.addEventListener('click', e => {
+        e.preventDefault();
+        burger.classList.remove('is-open');
+        body.classList.remove('overflow');
+        gsap.to(menu, { autoAlpha: 0, ease: "power2" })
+    });
+});
+
 
 function horizontalLoop(items, config) {
     items = gsap.utils.toArray(items);

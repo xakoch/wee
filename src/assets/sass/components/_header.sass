@@ -1,7 +1,7 @@
 .header
 	position: sticky
 	top: 10px
-	z-index: 3
+	z-index: 33
 	&__wrap
 		display: flex
 		align-items: center
@@ -10,8 +10,12 @@
 		-webkit-backdrop-filter: blur(20px)
 		backdrop-filter: blur(20px)
 		border-radius: 10px
+		+r(767)
+			border: 1px solid rgba($primary, .1) 
 		&.animated
-			background: hsla(16, 31%, 93%, .59)
+			// background: hsla(16, 31%, 93%, .59)
+			+r(767)
+				border-color: transparent !important
 
 .logo
 	display: flex
@@ -87,5 +91,95 @@ nav
 
 .burger
 	display: none
+	+reg
+	color: $b
+	font-size: 16px
+	outline: default
+	padding: 8px 15px
+	+br(10px)
+	border: 1px solid rgba($secondary, .5)
 	+r(991)
 		display: flex
+		align-items: center
+		grid-gap: 10px
+	&--lines
+		span
+			display: block
+			width: 35px
+			height: 1px
+			background: $b
+			position: relative
+			top: 1px
+			&:first-child
+				transform: translateY(-3px)
+			&:last-child
+				transform: translateY(3px)
+
+
+// ==================================
+// Mobile menu
+// ==================================
+.mobile__menu
+	position: fixed
+	top: 0
+	left: 0
+	z-index: 7777
+	visibility: hidden
+	width: 100%
+
+	&--inner
+		background: $w
+		color: $b
+		padding: 45px 30px
+		overflow-y: scroll
+		// height: 700px
+		// height: calc(60vh + 20px)
+		width: 100%
+
+	&--title
+		color: rgba($b, 0.6)
+		font-size: 13px
+		margin-bottom: 5px
+		display: block
+
+	.header__nav
+		display: grid
+		grid-gap: 15px
+		margin-top: 10px !important
+		a
+			color: $b
+			font-size: 24px
+
+	&--footer
+		margin-top: 30px
+		display: grid
+		grid-gap: 25px
+
+	.lang-item
+		font-size: 18px
+		width: 100%
+		color: $w
+		background: $primary
+		opacity: .3
+		padding: 10px 20px
+		text-align: center
+		+br(12px)
+		&.lang-item-active
+			opacity: 1
+
+	&--tel
+		+med
+		font-size: 24px
+		color: $b
+
+.burger__close
+	position: fixed
+	bottom: 70px
+	left: 50%
+	transform: translateX(-50%)
+	background: $w
+	color: $b
+	+br(20px)
+	padding: 20px 55px
+	z-index: 666
+	font-size: 18px
