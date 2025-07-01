@@ -1,5 +1,5 @@
 //===========================================
-// Projects
+// Projects - Home
 //===========================================
 .projects
 	padding: 80px 0
@@ -55,3 +55,65 @@
 			+lig
 			+r(767)
 				max-width: 100%
+
+//===========================================
+// Projects - Page
+//===========================================
+.page-projects
+	.projects
+		background: $f3
+
+.projects
+	
+	&__enter
+		padding-bottom: 100px
+		+r(767)
+			padding-bottom: 40px
+		h1
+			font-size: 10vw
+			+reg
+			font-weight: normal
+			+r(767)
+				font-size: 40px
+	
+	&__list
+		display: grid
+		-ms-flex-wrap: wrap
+		flex-wrap: wrap
+		grid-template-columns: 1fr 1fr
+		grid-gap: 20px
+		+r(767)
+			grid-template-columns: 1fr
+
+	&__item
+		+br(20px)
+		position: relative
+		overflow: hidden
+		&::before
+			content: ''
+			width: 100%
+			height: 100%
+			background: linear-gradient(180deg,rgba(255, 255, 255, 0.2) 0%, rgba(0, 0, 0, 0.7) 100%)
+			z-index: 1
+			position: absolute
+			top: 0
+			left: 0
+		h3
+			position: absolute
+			bottom: 40px
+			left: 40px
+			color: $w
+			+semi
+			font-weight: normal
+			font-size: 30px
+			z-index: 3
+			+r(767)
+				bottom: 20px
+				left: 20px
+				font-size: 20px
+				max-width: 90%
+		img
+			+trans
+		&:hover
+			img
+				transform: scale(1.1)
