@@ -1703,6 +1703,8 @@ nav a:hover {
 
 @media only screen and (max-width: 767px) {
     .project__detail--col {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
         grid-gap: 20px;
     }
 }
@@ -1730,6 +1732,12 @@ nav a:hover {
     font-family: Manrope, sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
+}
+
+@media only screen and (max-width: 767px) {
+    .project__detail--text {
+        font-size: 22px;
+    }
 }
 
 .project__desc {

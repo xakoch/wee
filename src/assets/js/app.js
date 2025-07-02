@@ -204,25 +204,6 @@ burger.addEventListener('click', e => {
     toggleMobileMenu();
 });
 
-links.forEach(link => {
-    link.addEventListener('click', e => {
-        e.preventDefault();
-        burger.classList.remove('is-open');
-        body.classList.remove('overflow');
-        gsap.to(menu, { autoAlpha: 0, ease: "power2" })
-    });
-});
-
-langLinks.forEach(lang => {
-    lang.addEventListener('click', e => {
-        e.preventDefault();
-        burger.classList.remove('is-open');
-        body.classList.remove('overflow');
-        gsap.to(menu, { autoAlpha: 0, ease: "power2" })
-    });
-});
-
-
 function horizontalLoop(items, config) {
     items = gsap.utils.toArray(items);
     config = config || {};

@@ -34,6 +34,8 @@
 	flex-direction: column
 	grid-gap: 30px
 	+r(767)
+		display: grid
+		grid-template-columns: repeat(2, 1fr)
 		grid-gap: 20px
 
 .project__detail--title
@@ -52,6 +54,8 @@
 	letter-spacing: -.02em
 	line-height: 1
 	+reg
+	+r(767)
+		font-size: 22px
 
 .project__desc
 	font-size: 28px
